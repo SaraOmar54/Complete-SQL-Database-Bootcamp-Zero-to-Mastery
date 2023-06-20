@@ -1,11 +1,18 @@
 -- How many female customers do we have from the state of Oregon (OR)?
 /*
 * Write your query here
+SELECT COUNT(first_name)
+FROM 'Customers'
+Where gender = 'F' AND state = 'OR';
 */
 
 -- Who over the age of 44 has an income of 100 000 or more? (excluding 44)
 /*
 * Write your query here
+SELECT 'first_name' 
+FROM 'Customers'
+WHERE age > '44' AND income >= '100000';
+
 */
 
 -- Who between the ages of 30 and 50 has an income less than 50 000?
@@ -13,9 +20,15 @@
 
 /*
 * Write your query here
+SELECT 'first_name' 
+FROM 'Customers'
+Where (age >= '30' AND age =< '50') AND income <50000;
 */
 
 -- What is the average income between the ages of 20 and 50? (Excluding 20 and 50)
 /*
 * Write your query here
+SELECT avg(income) 
+FROM 'Customer'
+WHERE age > '20' and age < '50'; 
 */

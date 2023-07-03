@@ -4,6 +4,7 @@
 * Question: Show NULL when the product is not on special (0)
 */
 
-SELECT *
-FROM products
+SELECT product_name, NULLIF(special_price, 0) AS special_price
+FROM products;
+
 
